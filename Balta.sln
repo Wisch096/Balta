@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balta.Domain", "Balta.Domain\Balta.Domain.csproj", "{E9648F43-4EDA-48FA-A547-AB1B7854CF25}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Balta.Domain.Test", "Balta.Domain.Test\Balta.Domain.Test.csproj", "{6DE55F8A-8399-4AE3-9DDC-59C6049A5E3D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{E9648F43-4EDA-48FA-A547-AB1B7854CF25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E9648F43-4EDA-48FA-A547-AB1B7854CF25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E9648F43-4EDA-48FA-A547-AB1B7854CF25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DE55F8A-8399-4AE3-9DDC-59C6049A5E3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DE55F8A-8399-4AE3-9DDC-59C6049A5E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DE55F8A-8399-4AE3-9DDC-59C6049A5E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DE55F8A-8399-4AE3-9DDC-59C6049A5E3D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

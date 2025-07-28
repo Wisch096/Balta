@@ -1,8 +1,18 @@
-﻿namespace Balta.Domain.Accounts.Entities;
+﻿using Balta.Domain.Shared.Entities;
 
-public class Student
+namespace Balta.Domain.Accounts.Entities;
+
+public class Student : Entity
 {
-    public long Id { get; set; }
+    #region Constructors
+
+    public Student() : base(Guid.NewGuid())
+    {
+        
+    }
+
+    #endregion
+   
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;

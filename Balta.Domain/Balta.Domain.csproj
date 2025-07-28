@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="Accounts\ValueObjects\" />
-    <Folder Include="Shared\Entities\" />
     <Folder Include="Shared\ValueObjects\" />
   </ItemGroup>
 
