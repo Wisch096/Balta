@@ -1,4 +1,5 @@
-﻿using Balta.Domain.Shared.Entities;
+﻿using Balta.Domain.Accounts.ValueObjects;
+using Balta.Domain.Shared.Entities;
 
 namespace Balta.Domain.Accounts.Entities;
 
@@ -6,18 +7,21 @@ public sealed class Student : Entity
 {
     #region Constructors
 
-    public Student(string firstName, string lastName, string email, string password) : base(Guid.NewGuid())
+    public Student(
+        string firstName, 
+        string lastName, 
+        string email, 
+        string password
+        ) : base(Guid.NewGuid())
     {
-        FirstName = firstName;
-        LastName = lastName;
+        Name = Name.Create(firstName, lastName);
         Email = email;
         Password = password;
     }
 
     #endregion
-   
-    public string FirstName { get; }
-    public string LastName { get; }
+
+    public Name Name { get; }
     public string Email { get; }
     public string Password { get; }
 }
