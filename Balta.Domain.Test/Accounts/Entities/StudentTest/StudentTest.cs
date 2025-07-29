@@ -7,6 +7,6 @@ public class StudentTest
     [Fact]
     public void Test1()
     {
-        var student = new Student("Matheus", "Wisch", "wisch.dev@gmail.com", "554514545");
+        var student = new Student("Matheus", "Wisch", "wisch.dev@gmail.com");
     }
 } 
