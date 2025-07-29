@@ -4,9 +4,4 @@
     
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Accounts\ValueObjects\" />
-    <Folder Include="Shared\ValueObjects\" />
-  </ItemGroup>
-
 </Project>

@@ -2,19 +2,22 @@
 
 namespace Balta.Domain.Accounts.Entities;
 
-public class Student : Entity
+public sealed class Student : Entity
 {
     #region Constructors
 
-    public Student() : base(Guid.NewGuid())
+    public Student(string firstName, string lastName, string email, string password) : base(Guid.NewGuid())
     {
-        
+        FirstName = firstName;
+        LastName = lastName;
+        Email = email;
+        Password = password;
     }
 
     #endregion
    
-    public string FirstName { get; set; } = string.Empty;
-    public string LastName { get; set; } = string.Empty;
-    public string Email { get; set; } = string.Empty;
-    public string Password { get; set; } = string.Empty;
+    public string FirstName { get; }
+    public string LastName { get; }
+    public string Email { get; }
+    public string Password { get; }
 }
