@@ -1,10 +1,12 @@
-﻿using Balta.Domain.Accounts.ValueObjects;
+﻿using Balta.Domain.Accounts.Events;
+using Balta.Domain.Accounts.ValueObjects;
 using Balta.Domain.Shared.Abstractions;
+using Balta.Domain.Shared.Aggregates.Abstractions;
 using Balta.Domain.Shared.Entities;
 
 namespace Balta.Domain.Accounts.Entities;
 
-public sealed class Student : Entity
+public sealed class Student : Entity, IAgregateRoot
 {
     #region Constructors
 
@@ -40,7 +42,9 @@ public sealed class Student : Entity
         Email email, 
         IDateTimeProvider dateTimeProvider)
     {
-        return new Student(name, email, dateTimeProvider);
+        var student = new Student(name, email, dateTimeProvider);
+        student.RaiseEvent(new OnStudentCreatedEvent(student.Id, student.Name, student.Email));
+        return student;   
     }
     
     public static Student Create(
@@ -61,7 +65,7 @@ public sealed class Student : Entity
     public Tracker Tracker { get; set; }
     
     #endregion
-
+    
     #region Overrides
     
     public override string ToString()
